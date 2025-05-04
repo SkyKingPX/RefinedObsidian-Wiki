@@ -835,7 +835,7 @@ export default function DocumentationPage() {
             />
             <span className="text-lg font-semibold text-primary">Refined Obsidian</span>
           </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">Made by Hyrx With 💖</p>
+          <p className="text-center text-sm text-muted-foreground md:text-left">All Rights Reserved</p>
           <div className="flex gap-4">
             <Button
               variant="ghost"
