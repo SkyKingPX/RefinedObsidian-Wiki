@@ -33,12 +33,12 @@ export default function DownloadsPage() {
           <TabsContent value="fabric" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-primary text-2xl">Fabric 1.20.1-1.21.4</CardTitle>
-                <CardDescription>Latest version: 2.4.1 (Released April 15, 2023)</CardDescription>
+                <CardTitle className="text-primary text-2xl">Fabric 1.20.1</CardTitle>
+                <CardDescription>Latest version: 1.0.0 (Released May 4, 2025)</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest (v2.4.1)</Button>
+                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest</Button>
                   <Button variant="outline" className="h-auto py-3 border-primary text-primary">
                     View All Versions
                   </Button>
@@ -51,12 +51,12 @@ export default function DownloadsPage() {
           <TabsContent value="forge" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-primary text-2xl">Forge 1.20.1-1.21.4</CardTitle>
-                <CardDescription>Latest version: 2.4.1 (Released April 15, 2023)</CardDescription>
+                <CardTitle className="text-primary text-2xl">Forge 1.21.4</CardTitle>
+                <CardDescription>Latest version: 1.0.0 (Released May 4, 2025)</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest (v2.4.1)</Button>
+                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest</Button>
                   <Button variant="outline" className="h-auto py-3 border-primary text-primary">
                     View All Versions
                   </Button>
@@ -69,12 +69,12 @@ export default function DownloadsPage() {
           <TabsContent value="neoforge" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-primary text-2xl">NeoForge 1.20.4-1.21.4</CardTitle>
-                <CardDescription>Latest version: 2.4.1 (Released April 15, 2023)</CardDescription>
+                <CardTitle className="text-primary text-2xl">NeoForge 1.21.1</CardTitle>
+                <CardDescription>Latest version: 1.0.0 (Released May 4, 2025)</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest (v2.4.1)</Button>
+                  <Button className="h-auto py-3 bg-primary hover:bg-primary/80">Download Latest</Button>
                   <Button variant="outline" className="h-auto py-3 border-primary text-primary">
                     View All Versions
                   </Button>
