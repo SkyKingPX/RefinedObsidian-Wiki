@@ -302,11 +302,11 @@ export default function DownloadsPage() {
                   <CardContent className="flex flex-col items-center justify-center p-8 h-full">
                     <div className="relative mb-4">
                       <Image
-                          src="/assets/curseforge.png"
+                          src="/assets/curseforge.svg"
                           alt="CurseForge"
                           width={64}
                           height={64}
-                          className="transition-transform group-hover:scale-110"
+                          className={`transition-transform group-hover:scale-110 ${theme === 'light' ? 'invert' : ''}`}
                       />
                       <div className="absolute -bottom-2 -right-2">
                         <Badge variant="secondary" className="text-xs">
@@ -354,7 +354,8 @@ export default function DownloadsPage() {
               size="icon"
               className="text-muted-foreground hover:text-primary transition-colors hover-lift"
             >
-              <Image src="/assets/github.png" alt="GitHub" width={20} height={20} />
+              <Image src="/assets/github.svg" alt="GitHub" width={20} height={20}
+                     className={`${theme === 'light' ? 'invert' : ''}`}/>
               <span className="sr-only">GitHub</span>
             </Button>
             </a>
