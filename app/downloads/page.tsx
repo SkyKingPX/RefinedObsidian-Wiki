@@ -57,12 +57,12 @@ export default function DownloadsPage() {
           <div className="flex items-center gap-2">
             <Image
               src="/assets/icon.png"
-              alt="Refined Obsidian Icon"
+              alt="RefinedObsidian Icon"
               width={24}
               height={24}
               className="animate-pulse-glow"
             />
-            <span className="text-xl font-bold text-primary">Refined Obsidian</span>
+            <span className="text-xl font-bold text-primary">RefinedObsidian</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover-lift relative group">
@@ -86,7 +86,7 @@ export default function DownloadsPage() {
 
       <div className="container py-12">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary mb-4">Download Refined Obsidian</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary mb-4">Download RefinedObsidian</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Choose your preferred platform and download the latest version
           </p>
@@ -111,7 +111,7 @@ export default function DownloadsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">Fabric</CardTitle>
-                <CardDescription>V1 - Refined Obsidian for Fabric</CardDescription>
+                <CardDescription>RefinedObsidian for Fabric</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -165,7 +165,7 @@ export default function DownloadsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">Forge</CardTitle>
-                <CardDescription>V1 - Refined Obsidian for Forge</CardDescription>
+                <CardDescription>RefinedObsidian for Forge</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -219,7 +219,7 @@ export default function DownloadsPage() {
             <Card>
               <CardHeader>
                 <CardTitle className="text-primary text-2xl">NeoForge</CardTitle>
-                <CardDescription>V1 - Refined Obsidian for NeoForge</CardDescription>
+                <CardDescription>RefinedObsidian for NeoForge</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -276,10 +276,10 @@ export default function DownloadsPage() {
             <a href="https://modrinth.com" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full">
                 <CardContent className="flex flex-col items-center justify-center p-8 h-full">
-                  <Image src="/assets/icon.png" alt="Modrinth" width={64} height={64} className="mb-4" />
+                  <Image src="/assets/modrinth.png" alt="Modrinth" width={64} height={64} className="animate-pulse-glow" />
                   <h3 className="text-xl font-bold">Modrinth</h3>
                   <p className="text-muted-foreground text-center mt-2">
-                    Download from the open-source modding platform
+                    Download from Modrinth
                   </p>
                 </CardContent>
               </Card>
@@ -287,9 +287,9 @@ export default function DownloadsPage() {
             <a href="https://curseforge.com" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full">
                 <CardContent className="flex flex-col items-center justify-center p-8 h-full">
-                  <Package className="h-16 w-16 text-primary mb-4" />
+                  <Image src="/assets/curseforge.png" alt="CurseForge" width={64} height={64} className="animate-pulse-glow" />
                   <h3 className="text-xl font-bold">CurseForge</h3>
-                  <p className="text-muted-foreground text-center mt-2">Download from CurseForge mod repository</p>
+                  <p className="text-muted-foreground text-center mt-2">Download from CurseForge</p>
                 </CardContent>
               </Card>
             </a>
@@ -303,31 +303,25 @@ export default function DownloadsPage() {
           <div className="flex items-center gap-2">
             <Image
               src="/assets/icon.png"
-              alt="Refined Obsidian Icon"
+              alt="RefinedObsidian Icon"
               width={20}
               height={20}
               className="animate-pulse-glow"
             />
-            <span className="text-lg font-semibold text-primary">Refined Obsidian</span>
+            <span className="text-lg font-semibold text-primary">RefinedObsidian</span>
           </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">Made by Hyrx With 💖</p>
+          <p className="text-center text-sm text-muted-foreground md:text-left">© 2025 EmberForge Development | All Rights Reserved</p>
           <div className="flex gap-4">
+            <a href="https://github.com/EmberForge-Development" target="_blank" rel="noopener noreferrer" className="block">
             <Button
               variant="ghost"
               size="icon"
               className="text-muted-foreground hover:text-primary transition-colors hover-lift"
             >
-              <Package className="h-5 w-5" />
-              <span className="sr-only">CurseForge</span>
+              <Image src="/assets/github.png" alt="GitHub" width={20} height={20} />
+              <span className="sr-only">GitHub</span>
             </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-primary transition-colors hover-lift"
-            >
-              <Image src="/assets/icon.png" alt="Modrinth" width={20} height={20} />
-              <span className="sr-only">Modrinth</span>
-            </Button>
+            </a>
           </div>
         </div>
       </footer>

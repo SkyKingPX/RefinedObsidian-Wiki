@@ -34,7 +34,7 @@ export default function DocumentationPage() {
   // Sample recipes data with different types
   const recipes = [
     {
-      name: "Refined Obsidian Ingot",
+      name: "RefinedObsidian Ingot",
       description: "The core crafting material, created by smelting obsidian with blaze powder.",
       type: "crafting",
       ingredients: [
@@ -44,14 +44,14 @@ export default function DocumentationPage() {
         { name: "Diamond", position: 4 },
         { name: "Blaze Powder", position: 7 },
       ],
-      result: { name: "Refined Obsidian Ingot", count: 2 },
+      result: { name: "RefinedObsidian Ingot", count: 2 },
     },
     {
       name: "Obsidian Crystal",
       description: "A rare gem used for advanced crafting and enchanting.",
       type: "crafting",
       ingredients: [
-        { name: "Refined Obsidian Ingot", position: 0 },
+        { name: "RefinedObsidian Ingot", position: 0 },
         { name: "Diamond", position: 1 },
         { name: "Ender Pearl", position: 3 },
         { name: "Glowstone Dust", position: 4 },
@@ -61,17 +61,17 @@ export default function DocumentationPage() {
     },
 
     {
-      name: "Refined Obsidian Pickaxe",
+      name: "RefinedObsidian Pickaxe",
       description: "A powerful pickaxe that can mine faster than netherite.",
       type: "crafting",
       ingredients: [
-        { name: "Refined Obsidian Ingot", position: 0 },
-        { name: "Refined Obsidian Ingot", position: 1 },
-        { name: "Refined Obsidian Ingot", position: 2 },
+        { name: "RefinedObsidian Ingot", position: 0 },
+        { name: "RefinedObsidian Ingot", position: 1 },
+        { name: "RefinedObsidian Ingot", position: 2 },
         { name: "Stick", position: 4 },
         { name: "Stick", position: 7 },
       ],
-      result: { name: "Refined Obsidian Pickaxe", count: 1 },
+      result: { name: "RefinedObsidian Pickaxe", count: 1 },
     },
     {
       name: "Obsidian Dust",
@@ -119,12 +119,12 @@ export default function DocumentationPage() {
           <div className="flex items-center gap-2">
             <Image
               src="/assets/icon.png"
-              alt="Refined Obsidian Icon"
+              alt="RefinedObsidian Icon"
               width={24}
               height={24}
               className="animate-pulse-glow"
             />
-            <span className="text-xl font-bold text-primary">Refined Obsidian</span>
+            <span className="text-xl font-bold text-primary">RefinedObsidian</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <Link href="/" className="text-sm font-medium hover-lift relative group">
@@ -206,7 +206,7 @@ export default function DocumentationPage() {
                 <div className="flex justify-center mb-3">
                   <Image
                     src="/assets/icon.png"
-                    alt="Refined Obsidian Icon"
+                    alt="RefinedObsidian Icon"
                     width={48}
                     height={48}
                     className="animate-float"
@@ -238,13 +238,13 @@ export default function DocumentationPage() {
               <div className="flex flex-col items-center text-center">
                 <Image
                   src="/assets/icon.png"
-                  alt="Refined Obsidian Icon"
+                  alt="RefinedObsidian Icon"
                   width={64}
                   height={64}
                   className="mb-4 animate-pulse-glow"
                 />
                 <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
-                  Refined Obsidian Wiki
+                  RefinedObsidian Wiki
                 </h1>
                 <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
                   Transform ordinary obsidian into powerful tools, armor, and building blocks with enhanced properties
@@ -265,7 +265,7 @@ export default function DocumentationPage() {
           <section id="introduction" className="space-y-6">
             <h2 className="text-2xl font-bold tracking-tight text-primary">Introduction</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Refined Obsidian is a comprehensive Minecraft mod that expands upon the vanilla obsidian block,
+              RefinedObsidian is a comprehensive Minecraft mod that expands upon the vanilla obsidian block,
               introducing a new tier of materials, tools, weapons, armor, and decorative blocks. By processing obsidian
               through various methods, players can create refined obsidian - a material that rivals netherite in
               durability while offering unique magical properties.
@@ -343,14 +343,14 @@ export default function DocumentationPage() {
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
                         src="/assets/refined-obsidian-ingot.png"
-                        alt="Refined Obsidian Ingot"
+                        alt="RefinedObsidian Ingot"
                         width={64}
                         height={64}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Refined Obsidian Ingot</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Ingot</h3>
                       <p className="text-sm text-muted-foreground">
                         The core crafting material, created by smelting obsidian with blaze powder.
                       </p>
@@ -377,14 +377,14 @@ export default function DocumentationPage() {
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
                         src="/assets/refined-obsidian-block.png"
-                        alt="Refined Obsidian Block"
+                        alt="RefinedObsidian Block"
                         width={64}
                         height={64}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Refined Obsidian Block</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Block</h3>
                       <p className="text-sm text-muted-foreground">
                         Blast-resistant building block with a sleek appearance.
                       </p>
@@ -418,14 +418,14 @@ export default function DocumentationPage() {
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
                         src="/assets/refined-obsidian-pickaxe.png"
-                        alt="Refined Obsidian Pickaxe"
+                        alt="RefinedObsidian Pickaxe"
                         width={64}
                         height={64}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Refined Obsidian Pickaxe</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Pickaxe</h3>
                       <p className="text-sm text-muted-foreground">
                         Mines faster than netherite and has a chance to double ore drops.
                       </p>
@@ -459,14 +459,14 @@ export default function DocumentationPage() {
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
                         src="/assets/refined-obsidian-helmet.png"
-                        alt="Refined Obsidian Helmet"
+                        alt="RefinedObsidian Helmet"
                         width={64}
                         height={64}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Refined Obsidian Helmet</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Helmet</h3>
                       <p className="text-sm text-muted-foreground">
                         Provides night vision and protection from fire damage.
                       </p>
@@ -476,14 +476,14 @@ export default function DocumentationPage() {
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
                         src="/assets/refined-obsidian-chestplate.png"
-                        alt="Refined Obsidian Chestplate"
+                        alt="RefinedObsidian Chestplate"
                         width={64}
                         height={64}
                         className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Refined Obsidian Chestplate</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Chestplate</h3>
                       <p className="text-sm text-muted-foreground">
                         Reduces explosion damage and provides fire resistance.
                       </p>
@@ -677,7 +677,7 @@ export default function DocumentationPage() {
               <div className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                 <Image
                   src="/assets/gallery-1.png"
-                  alt="Refined Obsidian Tools"
+                  alt="RefinedObsidian Tools"
                   width={500}
                   height={300}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -711,7 +711,7 @@ export default function DocumentationPage() {
               <CardHeader>
                 <CardTitle className="text-primary">Compatible With</CardTitle>
                 <CardDescription className="text-muted-foreground">
-                  Refined Obsidian is compatible with the following platforms and mods
+                  RefinedObsidian is compatible with the following platforms and mods
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -762,9 +762,9 @@ export default function DocumentationPage() {
             <div className="rounded-lg border border-border/50 bg-card p-6 hover-glow theme-transition">
               <div className="flex flex-col items-center gap-4 text-center md:flex-row md:text-left">
                 <div className="flex-1 space-y-2">
-                  <h3 className="text-xl font-bold text-primary">Get Refined Obsidian Mod</h3>
+                  <h3 className="text-xl font-bold text-primary">Get RefinedObsidian</h3>
                   <p className="text-muted-foreground">
-                    Download the latest version of Refined Obsidian for your Minecraft version.
+                    Download the latest version of RefinedObsidian for your Minecraft version.
                   </p>
                 </div>
                 <div className="flex gap-4">
@@ -806,7 +806,7 @@ export default function DocumentationPage() {
                       href="https://modrinth.com"
                       className="text-sm text-primary hover:underline flex items-center gap-1"
                     >
-                      <Image src="/assets/icon.png" alt="Modrinth" width={12} height={12} /> Modrinth
+                      <Image src="/assets/modrinth.png" alt="Modrinth" width={12} height={12} /> Modrinth
                     </a>
                     <a
                       href="https://curseforge.com"
@@ -823,44 +823,30 @@ export default function DocumentationPage() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-border/40 bg-background py-6 theme-transition">
+      <footer className="border-t border-border/40 bg-background py-6 theme-transition mt-12">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <div className="flex items-center gap-2">
             <Image
-              src="/assets/icon.png"
-              alt="Refined Obsidian Icon"
-              width={20}
-              height={20}
-              className="animate-pulse-glow"
+                src="/assets/icon.png"
+                alt="RefinedObsidian Icon"
+                width={20}
+                height={20}
+                className="animate-pulse-glow"
             />
-            <span className="text-lg font-semibold text-primary">Refined Obsidian</span>
+            <span className="text-lg font-semibold text-primary">RefinedObsidian</span>
           </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">All Rights Reserved</p>
+          <p className="text-center text-sm text-muted-foreground md:text-left">© 2025 EmberForge Development | All Rights Reserved</p>
           <div className="flex gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-primary transition-colors hover-lift"
-            >
-              <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-primary transition-colors hover-lift"
-            >
-              <Package className="h-5 w-5" />
-              <span className="sr-only">CurseForge</span>
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="text-muted-foreground hover:text-primary transition-colors hover-lift"
-            >
-              <Image src="/assets/icon.png" alt="Modrinth" width={20} height={20} />
-              <span className="sr-only">Modrinth</span>
-            </Button>
+            <a href="https://github.com/EmberForge-Development" target="_blank" rel="noopener noreferrer" className="block">
+              <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-muted-foreground hover:text-primary transition-colors hover-lift"
+              >
+                <Image src="/assets/github.png" alt="GitHub" width={20} height={20} />
+                <span className="sr-only">GitHub</span>
+              </Button>
+            </a>
           </div>
         </div>
       </footer>

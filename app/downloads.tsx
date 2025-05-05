@@ -3,13 +3,14 @@ import { Diamond, Package } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image";
 
 export default function DownloadsPage() {
   return (
     <div className="min-h-screen py-12 theme-transition">
       <div className="container">
         <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary mb-4">Download Refined Obsidian</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-primary mb-4">Download RefinedObsidian</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Choose your preferred platform and download the latest version
           </p>
@@ -91,20 +92,18 @@ export default function DownloadsPage() {
             <a href="https://modrinth.com" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full">
                 <CardContent className="flex flex-col items-center justify-center p-8 h-full">
-                  <Diamond className="h-16 w-16 text-primary mb-4" />
+                  <Image src="/assets/modrinth.png" alt="Modrinth" width={64} height={64} className="animate-pulse-glow" />
                   <h3 className="text-xl font-bold">Modrinth</h3>
-                  <p className="text-muted-foreground text-center mt-2">
-                    Download from the open-source modding platform
-                  </p>
+                  <p className="text-muted-foreground text-center mt-2">Download from Modrinth</p>
                 </CardContent>
               </Card>
             </a>
             <a href="https://curseforge.com" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full">
                 <CardContent className="flex flex-col items-center justify-center p-8 h-full">
-                  <Package className="h-16 w-16 text-primary mb-4" />
+                  <Image src="/assets/curseforge.png" alt="CurseForge" width={64} height={64} className="animate-pulse-glow" />
                   <h3 className="text-xl font-bold">CurseForge</h3>
-                  <p className="text-muted-foreground text-center mt-2">Download from CurseForge mod repository</p>
+                  <p className="text-muted-foreground text-center mt-2">Download from CurseForge</p>
                 </CardContent>
               </Card>
             </a>
