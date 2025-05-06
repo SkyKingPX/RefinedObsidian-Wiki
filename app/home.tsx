@@ -8,12 +8,12 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center theme-transition">
       <div className="text-center space-y-6">
-        <Diamond className="h-24 w-24 text-primary animate-pulse-glow mx-auto" />
+        <Diamond className="h-48 w-48 text-primary animate-pulse-glow mx-auto" />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
           RefinedObsidian
         </h1>
         <p className="max-w-2xl mx-auto text-xl text-muted-foreground">
-          Transform ordinary obsidian into powerful tools, armor, and building blocks
+        A Mod that adds Obsidian Decorative Blocks that are obtainable in Survival
         </p>
         <div className="pt-6">
           <Link href="/documentation">

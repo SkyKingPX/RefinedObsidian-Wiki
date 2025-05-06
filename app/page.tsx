@@ -17,7 +17,7 @@ import {
 } from "lucide-react"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
-
+import { LINKS } from "@/app/links"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
@@ -239,16 +239,15 @@ export default function DocumentationPage() {
                 <Image
                   src="/assets/icon.png"
                   alt="RefinedObsidian Icon"
-                  width={64}
-                  height={64}
+                  width={96}
+                  height={96}
                   className="mb-4 animate-pulse-glow"
                 />
                 <h1 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary/90 to-primary">
                   RefinedObsidian Wiki
                 </h1>
                 <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-                  Transform ordinary obsidian into powerful tools, armor, and building blocks with enhanced properties
-                  and stunning visual effects.
+                  A Minecraft Mod by EmberForge Development that adds various obsidian-themed items, blocks and armor trims.
                 </p>
                 <div className="mt-6 flex flex-wrap justify-center gap-4">
                   <Link href="/downloads">
@@ -260,49 +259,6 @@ export default function DocumentationPage() {
               </div>
             </div>
           </div>
-
-          {/* Introduction */}
-          <section id="introduction" className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-tight text-primary">Introduction</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              RefinedObsidian is a comprehensive Minecraft mod that expands upon the vanilla obsidian block,
-              introducing a new tier of materials, tools, weapons, armor, and decorative blocks. By processing obsidian
-              through various methods, players can create refined obsidian - a material that rivals netherite in
-              durability while offering unique magical properties.
-            </p>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-              <Card className="bg-card border-border/50 hover-scale theme-transition">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-primary">Enhanced Durability</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Tools and armor with exceptional durability and efficiency.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card border-border/50 hover-scale theme-transition">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-primary">Magical Properties</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Special effects and enchantments unique to refined obsidian.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-card border-border/50 hover-scale theme-transition">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-primary">Aesthetic Building</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-sm text-muted-foreground">
-                    Beautiful decorative blocks with unique textures and lighting effects.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
 
           {/* Features */}
           <section id="features" className="space-y-6">
@@ -769,11 +725,6 @@ export default function DocumentationPage() {
                 </div>
                 <div className="flex gap-4">
                   <Link href="/downloads">
-                    <Button className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg hover:shadow-primary/20">
-                      Download v2.4.1
-                    </Button>
-                  </Link>
-                  <Link href="/downloads">
                     <Button
                       variant="outline"
                       className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
@@ -788,9 +739,9 @@ export default function DocumentationPage() {
                 <div className="space-y-2">
                   <h4 className="font-medium text-primary">Requirements</h4>
                   <ul className="space-y-1 text-sm text-muted-foreground">
-                    <li>Minecraft 1.20.1 or newer</li>
-                    <li>Fabric, Forge, or NeoForge</li>
-                    <li>Java 17 or newer</li>
+                    <li>• Minecraft 1.20.1 or newer</li>
+                    <li>• Fabric, Forge, or NeoForge</li>
+                    <li>• Java 17 or newer</li>
                   </ul>
                 </div>
                 <div className="space-y-2">
@@ -803,16 +754,18 @@ export default function DocumentationPage() {
                   <h4 className="font-medium text-primary">Download Options</h4>
                   <div className="flex flex-col gap-2">
                     <a
-                      href="https://modrinth.com"
+                      href={LINKS.modrinth_project}
                       className="text-sm text-primary hover:underline flex items-center gap-1"
                     >
-                      <Image src="/assets/modrinth.png" alt="Modrinth" width={12} height={12} /> Modrinth
+                      <Image src="/assets/modrinth.png" alt="Modrinth" width={16} height={16} />
+                      Modrinth
                     </a>
                     <a
-                      href="https://curseforge.com"
+                      href={LINKS.curseforge_project}
                       className="text-sm text-primary hover:underline flex items-center gap-1"
                     >
-                      <Package className="h-3 w-3" /> CurseForge
+                    <Image src="/assets/curseforge.svg" alt="CurseForge" width={16} height={16} className={`${theme === 'light' ? 'invert' : ''}`} />
+                      CurseForge
                     </a>
                   </div>
                 </div>
@@ -835,7 +788,7 @@ export default function DocumentationPage() {
             />
             <span className="text-lg font-semibold text-primary">RefinedObsidian</span>
           </div>
-          <p className="text-center text-sm text-muted-foreground md:text-left">© 2025 EmberForge Development | All Rights Reserved</p>
+          <p className="text-center text-sm text-muted-foreground">© 2025 EmberForge Development | All Rights Reserved</p>
           <div className="flex gap-4">
             <a href="https://github.com/EmberForge-Development" target="_blank" rel="noopener noreferrer" className="block">
               <Button
@@ -843,7 +796,8 @@ export default function DocumentationPage() {
                   size="icon"
                   className="text-muted-foreground hover:text-primary transition-colors hover-lift"
               >
-                <Image src="/assets/github.png" alt="GitHub" width={20} height={20} />
+              <Image src="/assets/github.svg" alt="GitHub" width={20} height={20}
+                  className={`${theme === 'light' ? 'invert' : ''}`}/>
                 <span className="sr-only">GitHub</span>
               </Button>
             </a>
