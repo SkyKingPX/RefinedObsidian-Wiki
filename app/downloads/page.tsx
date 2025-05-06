@@ -152,19 +152,19 @@ export default function DownloadsPage() {
               <TabsList className="grid grid-cols-3 w-full p-1 bg-secondary/30">
                 <TabsTrigger
                     value="fabric"
-                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-zinc-400 data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
+                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-secondary data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
                 >
                   Fabric
                 </TabsTrigger>
                 <TabsTrigger
                     value="forge"
-                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-zinc-400 data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
+                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-secondary data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
                 >
                   Forge
                 </TabsTrigger>
                 <TabsTrigger
                     value="neoforge"
-                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-zinc-400 data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
+                    className="text-lg py-3 rounded-md data-[state=active]:text-primary data-[state=inactive]:text-secondary data-[state=inactive]:hover:text-zinc-200 bg-secondary/30"
                 >
                   NeoForge
                 </TabsTrigger>
@@ -301,7 +301,7 @@ export default function DownloadsPage() {
                 <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full group">
                   <CardContent className="flex flex-col items-center justify-center p-8 h-full">
                     <div className="relative mb-4">
-                      <Image
+                    <Image
                           src="/assets/curseforge.svg"
                           alt="CurseForge"
                           width={64}

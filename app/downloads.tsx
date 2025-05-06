@@ -101,7 +101,13 @@ export default function DownloadsPage() {
             <a href="https://curseforge.com" target="_blank" rel="noopener noreferrer" className="block">
               <Card className="hover:border-primary/50 transition-all hover:shadow-lg hover:shadow-primary/10 h-full">
                 <CardContent className="flex flex-col items-center justify-center p-8 h-full">
-                  <Image src="/assets/curseforge.png" alt="CurseForge" width={64} height={64} className="animate-pulse-glow" />
+                <Image
+                          src="/assets/curseforge.svg"
+                          alt="CurseForge"
+                          width={64}
+                          height={64}
+                          className={`animate-pulse-glow ${theme === 'light' ? 'invert' : ''}`}
+                      />
                   <h3 className="text-xl font-bold">CurseForge</h3>
                   <p className="text-muted-foreground text-center mt-2">Download from CurseForge</p>
                 </CardContent>
