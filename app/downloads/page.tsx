@@ -205,7 +205,7 @@ export default function DownloadsPage() {
                                                     <CardDescription>RefinedObsidian for {loader}</CardDescription>
                                                 </div>
                                                 <TooltipProvider>
-                                                    <Tooltip>
+                                                    <Tooltip content={undefined}>
                                                         <TooltipTrigger asChild>
                                                             <Button variant="ghost" size="icon"><Info
                                                                 className="h-5 w-5"/><span className="sr-only">Installation Info</span></Button>

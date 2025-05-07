@@ -137,14 +137,14 @@ export default function DocumentationPage() {
               <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
             </Link>
             <div className="flex items-center gap-2">
-              <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <input
-                  type="search"
-                  placeholder="Search..."
-                  className="rounded-full bg-secondary pl-8 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 w-40 transition-all duration-300 focus:w-60"
-                />
-              </div>
+              {/*<div className="relative">*/}
+              {/*  <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />*/}
+              {/*  <input*/}
+              {/*    type="search"*/}
+              {/*    placeholder="Search..."*/}
+              {/*    className="rounded-full bg-secondary pl-8 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 w-40 transition-all duration-300 focus:w-60"*/}
+              {/*  />*/}
+              {/*</div>*/}
               <ThemeToggle />
             </div>
           </div>
@@ -270,25 +270,25 @@ export default function DocumentationPage() {
                   value="items"
                   className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                 >
-                  Items & Blocks
+                  Items
                 </TabsTrigger>
                 <TabsTrigger
-                  value="tools"
+                  value="blocks"
                   className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                 >
-                  Tools & Weapons
+                  Blocks
                 </TabsTrigger>
                 <TabsTrigger
-                  value="armor"
-                  className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                    value="trims"
+                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                 >
-                  Armor
+                  Armor Trims
                 </TabsTrigger>
                 <TabsTrigger
-                  value="machines"
-                  className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                    value="recipes"
+                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                 >
-                  Machines
+                  Recipes
                 </TabsTrigger>
               </TabsList>
               <TabsContent
@@ -367,18 +367,18 @@ export default function DocumentationPage() {
                 </div>
               </TabsContent>
               <TabsContent
-                value="tools"
-                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
+                  value="blocks"
+                  className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
               >
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/refined-obsidian-pickaxe.png"
-                        alt="RefinedObsidian Pickaxe"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/refined-obsidian-pickaxe.png"
+                          alt="RefinedObsidian Pickaxe"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
@@ -391,11 +391,11 @@ export default function DocumentationPage() {
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/obsidian-sword.png"
-                        alt="Obsidian Sword"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/obsidian-sword.png"
+                          alt="Obsidian Sword"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
@@ -408,82 +408,82 @@ export default function DocumentationPage() {
                 </div>
               </TabsContent>
               <TabsContent
-                value="armor"
-                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
+                  value="trims"
+                  className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
               >
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/refined-obsidian-helmet.png"
-                        alt="RefinedObsidian Helmet"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/refined-obsidian-pickaxe.png"
+                          alt="RefinedObsidian Pickaxe"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Helmet</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Pickaxe</h3>
                       <p className="text-sm text-muted-foreground">
-                        Provides night vision and protection from fire damage.
+                        Mines faster than netherite and has a chance to double ore drops.
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/refined-obsidian-chestplate.png"
-                        alt="RefinedObsidian Chestplate"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/obsidian-sword.png"
+                          alt="Obsidian Sword"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Chestplate</h3>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Sword</h3>
                       <p className="text-sm text-muted-foreground">
-                        Reduces explosion damage and provides fire resistance.
+                        Deals additional fire damage and has a chance to apply Wither effect.
                       </p>
                     </div>
                   </div>
                 </div>
               </TabsContent>
               <TabsContent
-                value="machines"
-                className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
+                  value="recipes"
+                  className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
               >
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/obsidian-infuser.png"
-                        alt="Obsidian Infuser"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/refined-obsidian-pickaxe.png"
+                          alt="RefinedObsidian Pickaxe"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Obsidian Infuser</h3>
+                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Pickaxe</h3>
                       <p className="text-sm text-muted-foreground">
-                        Special crafting station for creating refined obsidian items.
+                        Mines faster than netherite and has a chance to double ore drops.
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/crystal-forge.png"
-                        alt="Crystal Forge"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          src="/assets/obsidian-sword.png"
+                          alt="Obsidian Sword"
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Crystal Forge</h3>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Sword</h3>
                       <p className="text-sm text-muted-foreground">
-                        Advanced machine for creating obsidian crystals and enchanting items.
+                        Deals additional fire damage and has a chance to apply Wither effect.
                       </p>
                     </div>
                   </div>
@@ -494,7 +494,7 @@ export default function DocumentationPage() {
 
           {/* Crafting */}
           <section id="crafting" className="space-y-6">
-            <h2 className="text-2xl font-bold tracking-tight text-primary">Crafting Guide</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-primary">Recipe Guide</h2>
             <div className="mb-4">
               <Tabs defaultValue="crafting" className="w-full" onValueChange={setRecipeType}>
                 <TabsList className="bg-background border border-border/50 p-1 theme-transition">
@@ -502,22 +502,29 @@ export default function DocumentationPage() {
                     value="crafting"
                     className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Pickaxe className="h-4 w-4 mr-2" />
+                    <Image src="assets/crafting.png" alt="Crafting Table" width={24} height={24} className="mr-2" />
                     Crafting Table
                   </TabsTrigger>
                   <TabsTrigger
                     value="stonecutter"
                     className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Scissors className="h-4 w-4 mr-2" />
+                    <Image src="assets/stonecutting.png" alt="Stonecutter" width={24} height={24} className="mr-2" />
                     Stone Cutter
                   </TabsTrigger>
                   <TabsTrigger
                     value="smelting"
                     className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Flame className="h-4 w-4 mr-2" />
+                    <Image src="assets/smelting.png" alt="Furnace" width={24} height={24} className="mr-2" />
                     Smelting
+                  </TabsTrigger>
+                  <TabsTrigger
+                      value="blasting"
+                      className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                  >
+                    <Image src="assets/blasting.png" alt="Blast Furnace" width={24} height={24} className="mr-2" />
+                    Blasting
                   </TabsTrigger>
                 </TabsList>
               </Tabs>
@@ -597,6 +604,23 @@ export default function DocumentationPage() {
                       </div>
                     </div>
                   )}
+                  {recipeType === "blasting" && (
+                      <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition">
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="aspect-square w-16 rounded border border-border/50 bg-card/80 p-1">
+                            <Image
+                                src={`/assets/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "-")}.png`}
+                                alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                width={64}
+                                height={64}
+                                className="h-full w-full object-cover"
+                            />
+                          </div>
+                          <Flame className="h-8 w-8 text-primary animate-pulse" />
+                          <p className="text-xs text-muted-foreground">Blast Furnace</p>
+                        </div>
+                      </div>
+                  )}
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="flex items-center gap-4">
@@ -634,7 +658,7 @@ export default function DocumentationPage() {
               <div className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                 <Image
                   src="/assets/gallery-1.png"
-                  alt="RefinedObsidian Tools"
+                  alt="RefinedObsidian Overview"
                   width={500}
                   height={300}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -643,7 +667,7 @@ export default function DocumentationPage() {
               <div className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                 <Image
                   src="/assets/gallery-2.png"
-                  alt="Obsidian Castle"
+                  alt="Block Palette"
                   width={500}
                   height={300}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -652,7 +676,7 @@ export default function DocumentationPage() {
               <div className="overflow-hidden rounded-lg border border-border/50 group hover-glow theme-transition">
                 <Image
                   src="/assets/gallery-3.png"
-                  alt="Obsidian Armor Set"
+                  alt="Building"
                   width={500}
                   height={300}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
