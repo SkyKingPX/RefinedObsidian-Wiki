@@ -7,13 +7,12 @@ import {
   ArrowRight,
   ChevronRight,
   FileText,
-  Github,
   Menu,
   Package,
   Pickaxe,
   Search,
   Flame,
-  Scissors,
+  Scissors, Download,
 } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { useTheme } from "next-themes"
@@ -36,7 +35,6 @@ export default function DocumentationPage() {
   const recipes = [
     {
       name: "RefinedObsidian Ingot",
-      description: "The core crafting material, created by smelting obsidian with blaze powder.",
       type: "crafting",
       ingredients: [
         { name: "Obsidian", position: 0 },
@@ -49,7 +47,6 @@ export default function DocumentationPage() {
     },
     {
       name: "Obsidian Crystal",
-      description: "A rare gem used for advanced crafting and enchanting.",
       type: "crafting",
       ingredients: [
         { name: "RefinedObsidian Ingot", position: 0 },
@@ -60,10 +57,8 @@ export default function DocumentationPage() {
       ],
       result: { name: "Obsidian Crystal", count: 1 },
     },
-
     {
       name: "RefinedObsidian Pickaxe",
-      description: "A powerful pickaxe that can mine faster than netherite.",
       type: "crafting",
       ingredients: [
         { name: "RefinedObsidian Ingot", position: 0 },
@@ -76,15 +71,19 @@ export default function DocumentationPage() {
     },
     {
       name: "Obsidian Dust",
-      description: "Fine obsidian dust used in advanced recipes.",
-      type: "stonecutter",
+      type: "stonecutting",
       ingredients: [{ name: "Obsidian", position: 0 }],
       result: { name: "Obsidian Dust", count: 4 },
     },
     {
       name: "Purified Obsidian",
-      description: "Purified obsidian with enhanced properties.",
       type: "smelting",
+      ingredients: [{ name: "Obsidian", position: 0 }],
+      result: { name: "Purified Obsidian", count: 1 },
+    },
+    {
+      name: "Purified Obsidian",
+      type: "blasting",
       ingredients: [{ name: "Obsidian", position: 0 }],
       result: { name: "Purified Obsidian", count: 1 },
     },
@@ -191,7 +190,7 @@ export default function DocumentationPage() {
                   </Link>
                   <Link href="#installation" className="w-full">
                     <Button variant="ghost" size="sm" className="w-full justify-start gap-2 hover-lift group">
-                      <Github className="h-4 w-4 transition-transform group-hover:scale-110" />
+                      <Download className="h-4 w-4 transition-transform group-hover:scale-110" />
                       <span>Download</span>
                     </Button>
                   </Link>
@@ -568,7 +567,7 @@ export default function DocumentationPage() {
                       })}
                     </div>
                   )}
-                  {recipeType === "stonecutter" && (
+                  {recipeType === "stonecutting" && (
                     <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition">
                       <div className="flex items-center gap-4">
                         <div className="aspect-square w-16 rounded border border-border/50 bg-card/80 p-1">
@@ -642,7 +641,6 @@ export default function DocumentationPage() {
                   </div>
                 </div>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">{filteredRecipes[currentRecipeIndex].description}</p>
               <div className="mt-4 flex justify-center">
                 <p className="text-xs text-muted-foreground">
                   Recipe {currentRecipeIndex + 1} of {filteredRecipes.length}
