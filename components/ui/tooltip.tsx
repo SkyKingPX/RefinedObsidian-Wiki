@@ -5,13 +5,71 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 
 import {cn} from "@/lib/utils"
 
-const TooltipProvider = ({ children, ...props }: TooltipPrimitive.TooltipProviderProps) => (
-    <TooltipPrimitive.Provider delayDuration={0} {...props}>
-        {children}
-    </TooltipPrimitive.Provider>
-)
+const TooltipProvider = ({children, ...props}: TooltipPrimitive.TooltipProviderProps) => {
+    const [isMobile, setIsMobile] = React.useState(false)
 
-const Tooltip = TooltipPrimitive.Root
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768)
+        }
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    return (
+        <TooltipPrimitive.Provider
+            delayDuration={isMobile ? 0 : 200}
+            disableHoverableContent={isMobile}
+            {...props}
+        >
+            {children}
+        </TooltipPrimitive.Provider>
+    )
+}
+
+const Tooltip = ({content, children, ...props}: TooltipPrimitive.TooltipProps & { content: React.ReactNode }) => {
+    const [isOpen, setIsOpen] = React.useState(false)
+    const [isMobile, setIsMobile] = React.useState(false)
+
+    React.useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 768)
+        }
+        checkMobile()
+        window.addEventListener('resize', checkMobile)
+        return () => window.removeEventListener('resize', checkMobile)
+    }, [])
+
+    return (
+        <TooltipPrimitive.Root
+            open={isOpen}
+            onOpenChange={setIsOpen}
+            {...props}
+        >
+            <TooltipPrimitive.Trigger
+                onClick={() => {
+                    if (isMobile) {
+                        setIsOpen(!isOpen)
+                    }
+                }}
+                onMouseEnter={() => {
+                    if (!isMobile) {
+                        setIsOpen(true)
+                    }
+                }}
+                onMouseLeave={() => {
+                    if (!isMobile) {
+                        setIsOpen(false)
+                    }
+                }}
+            >
+                {children}
+            </TooltipPrimitive.Trigger>
+            {content}
+        </TooltipPrimitive.Root>
+    )
+}
 
 const TooltipTrigger = TooltipPrimitive.Trigger
 
