@@ -226,12 +226,6 @@ export default function DocumentationPage() {
                 >
                   Armor Trims
                 </TabsTrigger>
-                <TabsTrigger
-                    value="recipes"
-                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
-                >
-                  Recipes
-                </TabsTrigger>
               </TabsList>
               <TabsContent
                 value="items"
@@ -241,68 +235,17 @@ export default function DocumentationPage() {
                   <div className="flex gap-4 group hover-lift">
                     <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
                       <Image
-                        src="/assets/refined-obsidian-ingot.png"
-                        alt="RefinedObsidian Ingot"
+                        src="/assets/items/obsidian_dust.png"
+                        alt="Obsidian Dust"
                         width={64}
                         height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Ingot</h3>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Dust</h3>
                       <p className="text-sm text-muted-foreground">
-                        The core crafting material, created by smelting obsidian with blaze powder.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
-                      <Image
-                        src="/assets/obsidian-crystal.png"
-                        alt="Obsidian Crystal"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary">Obsidian Crystal</h3>
-                      <p className="text-sm text-muted-foreground">
-                        A rare gem used for advanced crafting and enchanting.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
-                      <Image
-                        src="/assets/refined-obsidian-block.png"
-                        alt="RefinedObsidian Block"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Block</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Blast-resistant building block with a sleek appearance.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
-                      <Image
-                        src="/assets/glowing-obsidian.png"
-                        alt="Glowing Obsidian"
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary">Glowing Obsidian</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Decorative block that emits a purple glow, perfect for atmospheric lighting.
+                        A powder that can be crafted from Cutting Obsidian and used for armor trims and cobbled Obsidian.
                       </p>
                     </div>
                   </div>
@@ -312,38 +255,113 @@ export default function DocumentationPage() {
                   value="blocks"
                   className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
               >
+                <p className="text-sm text-muted-foreground">All Blocks are Blast resistant and can only be mined with at least a Diamond Pickaxe.</p>
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                       <Image
-                          src="/assets/refined-obsidian-pickaxe.png"
-                          alt="RefinedObsidian Pickaxe"
+                          src="/assets/items/cobbled_obsidian.png"
+                          alt="Cobbled Obsidian"
                           width={64}
                           height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          className="w-full h-full object-contain"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Pickaxe</h3>
+                      <h3 className="text-lg font-semibold text-primary">Cobbled Obsidian</h3>
                       <p className="text-sm text-muted-foreground">
-                        Mines faster than netherite and has a chance to double ore drops.
+                        The cobbled version of Obsidian. It can be used for all the other Block recipes.
                       </p>
                     </div>
                   </div>
                   <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                       <Image
-                          src="/assets/obsidian-sword.png"
-                          alt="Obsidian Sword"
+                          src="/assets/items/cobbled_obsidian_slab.png"
+                          alt="Cobbled Obsidian Slab"
                           width={64}
                           height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          className="w-full h-full object-contain"
                       />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-primary">Obsidian Sword</h3>
+                      <h3 className="text-lg font-semibold text-primary">Cobbled Obsidian Slab</h3>
                       <p className="text-sm text-muted-foreground">
-                        Deals additional fire damage and has a chance to apply Wither effect.
+                        The Slab variant of Cobbled Obsidian.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 group hover-lift">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
+                      <Image
+                          src="/assets/items/cobbled_obsidian_stairs.png"
+                          alt="Cobbled Obsidian Stairs"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary">Cobbled Obsidian Stairs</h3>
+                      <p className="text-sm text-muted-foreground">
+                        The Stair variant of Cobbled Obsidian.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 group hover-lift">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
+                      <Image
+                          src="/assets/items/obsidian_bricks.png"
+                          alt="Obsidian Bricks"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Bricks</h3>
+                      <p className="text-sm text-muted-foreground">
+                        Obsidian Bricks that are crafted from Cobbled Obsidian.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 group hover-lift">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
+                      <Image
+                          src="/assets/items/obsidian_brick_slab.png"
+                          alt="Obsidian Brick Slab"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Brick Slab</h3>
+                      <p className="text-sm text-muted-foreground">
+                        The Slab variant of Obsidian Bricks.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 group hover-lift">
+                    <div
+                        className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
+                      <Image
+                          src="/assets/items/obsidian_brick_stairs.png"
+                          alt="Obsidian Brick Stairs"
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-primary">Obsidian Brick Stairs</h3>
+                      <p className="text-sm text-muted-foreground">
+                        The Stair variant of Obsidian Bricks.
                       </p>
                     </div>
                   </div>
@@ -355,13 +373,13 @@ export default function DocumentationPage() {
               >
                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                       <Image
-                          src="/assets/refined-obsidian-pickaxe.png"
+                          src="/assets/items/refined-obsidian-pickaxe.png"
                           alt="RefinedObsidian Pickaxe"
                           width={64}
                           height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          className="w-full h-full object-contain"
                       />
                     </div>
                     <div>
@@ -372,54 +390,13 @@ export default function DocumentationPage() {
                     </div>
                   </div>
                   <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
+                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
                       <Image
-                          src="/assets/obsidian-sword.png"
+                          src="/assets/items/obsidian-sword.png"
                           alt="Obsidian Sword"
                           width={64}
                           height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary">Obsidian Sword</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Deals additional fire damage and has a chance to apply Wither effect.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </TabsContent>
-              <TabsContent
-                  value="recipes"
-                  className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
-              >
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                  <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
-                      <Image
-                          src="/assets/refined-obsidian-pickaxe.png"
-                          alt="RefinedObsidian Pickaxe"
-                          width={64}
-                          height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-primary">RefinedObsidian Pickaxe</h3>
-                      <p className="text-sm text-muted-foreground">
-                        Mines faster than netherite and has a chance to double ore drops.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 group hover-lift">
-                    <div className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50">
-                      <Image
-                          src="/assets/obsidian-sword.png"
-                          alt="Obsidian Sword"
-                          width={64}
-                          height={64}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-110"
+                          className="w-full h-full object-contain"
                       />
                     </div>
                     <div>
