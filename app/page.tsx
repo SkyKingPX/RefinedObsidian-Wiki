@@ -717,7 +717,15 @@ export default function DocumentationPage() {
                 <div className="space-y-2">
                   <h4 className="font-medium text-primary">Installation</h4>
                   <p className="text-sm text-muted-foreground">
-                    Place the downloaded .jar file in your Minecraft mods folder or automatically install it into an Instance with the CurseForge or Modrinth App.
+                    Place the downloaded .jar file in your Minecraft mods folder or automatically install it into an Instance with the{" "}
+                    <a href="https://modrinth.com/app" className="text-primary hover:underline">
+                      Modrinth
+                    </a>{" "}
+                    or{" "}
+                    <a href="https://www.curseforge.com/download/app" className="text-primary hover:underline">
+                      CurseForge
+                    </a>{" "}
+                    App.
                   </p>
                 </div>
                 <div className="space-y-2">
