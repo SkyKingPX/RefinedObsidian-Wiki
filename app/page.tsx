@@ -575,12 +575,12 @@ export default function DocumentationPage() {
                     <div className="relative">
                       <div
                           className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition"
-                          style={{width: "150px", height: "150px"}}>
+                          style={{width: "120px", height: "120px"}}>
                         <Image
                             src={`/assets/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
                             alt={filteredRecipes[currentRecipeIndex].result.name}
-                            width={32}
-                            height={32}
+                            width={96}
+                            height={96}
                             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-contain"
                         />
                       </div>
