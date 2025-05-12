@@ -441,31 +441,31 @@ export default function DocumentationPage() {
               <Tabs defaultValue="crafting" className="w-full" onValueChange={setRecipeType}>
                 <TabsList className="bg-background border border-border/50 p-1 theme-transition">
                   <TabsTrigger
-                    value="crafting"
-                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                      value="crafting"
+                      className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Image src="assets/crafting.png" alt="Crafting Table" width={24} height={24} className="mr-2" />
+                    <Image src="assets/crafting.png" alt="Crafting Table" width={24} height={24} className="mr-2"/>
                     Crafting Table
                   </TabsTrigger>
                   <TabsTrigger
-                    value="stonecutter"
-                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                      value="stonecutting"
+                      className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Image src="assets/stonecutting.png" alt="Stonecutter" width={24} height={24} className="mr-2" />
+                    <Image src="assets/stonecutting.png" alt="Stonecutter" width={24} height={24} className="mr-2"/>
                     Stone Cutter
                   </TabsTrigger>
                   <TabsTrigger
-                    value="smelting"
-                    className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
+                      value="smelting"
+                      className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Image src="assets/smelting.png" alt="Furnace" width={24} height={24} className="mr-2" />
+                    <Image src="assets/smelting.png" alt="Furnace" width={24} height={24} className="mr-2"/>
                     Smelting
                   </TabsTrigger>
                   <TabsTrigger
                       value="blasting"
                       className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                   >
-                    <Image src="assets/blasting.png" alt="Blast Furnace" width={24} height={24} className="mr-2" />
+                    <Image src="assets/blasting.png" alt="Blast Furnace" width={24} height={24} className="mr-2"/>
                     Blasting
                   </TabsTrigger>
                 </TabsList>
@@ -474,112 +474,122 @@ export default function DocumentationPage() {
             <div className="rounded-lg border border-border/50 bg-card p-6 hover-glow theme-transition">
               <div className="flex items-center justify-between mb-4">
                 <Button variant="ghost" size="icon" onClick={prevRecipe} className="hover:bg-primary/10">
-                  <ArrowLeft className="h-5 w-5 text-primary" />
+                  <ArrowLeft className="h-5 w-5 text-primary"/>
                   <span className="sr-only">Previous recipe</span>
                 </Button>
                 <h3 className="text-xl font-semibold text-primary">{filteredRecipes[currentRecipeIndex].name}</h3>
                 <Button variant="ghost" size="icon" onClick={nextRecipe} className="hover:bg-primary/10">
-                  <ArrowRight className="h-5 w-5 text-primary" />
+                  <ArrowRight className="h-5 w-5 text-primary"/>
                   <span className="sr-only">Next recipe</span>
                 </Button>
               </div>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 <div>
                   {recipeType === "crafting" && (
-                    <div className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-background p-2 theme-transition">
-                      {Array.from({ length: 9 }).map((_, index) => {
-                        const ingredient = filteredRecipes[currentRecipeIndex].ingredients.find(
-                          (i) => i.position === index,
-                        )
-                        return (
-                          <div
-                            key={index}
-                            className="aspect-square rounded border border-border/50 bg-card/80 p-1 transition-all duration-300 hover:border-primary/50 hover:bg-card theme-transition"
-                          >
-                            {ingredient && (
-                              <Image
-                                src={`/assets/${ingredient.name.toLowerCase().replace(/\s+/g, "-")}.png`}
-                                alt={ingredient.name}
-                                width={50}
-                                height={50}
-                                className="h-full w-full object-cover"
-                              />
-                            )}
-                          </div>
-                        )
-                      })}
-                    </div>
+                      <div
+                          className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-background p-2 theme-transition max-w-[250px] mx-auto">
+                        {Array.from({length: 9}).map((_, index) => {
+                          const ingredient = filteredRecipes[currentRecipeIndex].ingredients.find(
+                              (i) => i.position === index,
+                          )
+                          return (
+                              <div
+                                  key={index}
+                                  className="aspect-square rounded border border-border/50 bg-card/80 p-1 transition-all duration-300 hover:border-primary/50 hover:bg-card theme-transition"
+                                  style={{maxWidth: "100px", maxHeight: "100px"}}
+                              >
+                                {ingredient && (
+                                    <Image
+                                        src={`/assets/items/${ingredient.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                        alt={ingredient.name}
+                                        width={32}
+                                        height={32}
+                                        className="w-full h-full object-contain"
+                                    />
+                                )}
+                              </div>
+                          )
+                        })}
+                      </div>
                   )}
                   {recipeType === "stonecutting" && (
-                    <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition">
-                      <div className="flex items-center gap-4">
-                        <div className="aspect-square w-16 rounded border border-border/50 bg-card/80 p-1">
-                          <Image
-                            src={`/assets/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "-")}.png`}
-                            alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                            width={64}
-                            height={64}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                        <div className="flex-1 text-center">
-                          <Scissors className="h-8 w-8 text-primary mx-auto" />
-                          <p className="text-xs text-muted-foreground mt-1">Stone Cutter</p>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {recipeType === "smelting" && (
-                    <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition">
-                      <div className="flex flex-col items-center gap-2">
-                        <div className="aspect-square w-16 rounded border border-border/50 bg-card/80 p-1">
-                          <Image
-                            src={`/assets/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "-")}.png`}
-                            alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                            width={64}
-                            height={64}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                        <Flame className="h-8 w-8 text-primary animate-pulse" />
-                        <p className="text-xs text-muted-foreground">Furnace</p>
-                      </div>
-                    </div>
-                  )}
-                  {recipeType === "blasting" && (
-                      <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition">
-                        <div className="flex flex-col items-center gap-2">
-                          <div className="aspect-square w-16 rounded border border-border/50 bg-card/80 p-1">
+                      <div
+                          className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                        <div className="flex items-center gap-4">
+                          <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
                             <Image
-                                src={`/assets/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "-")}.png`}
+                                src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
                                 alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                                width={64}
-                                height={64}
-                                className="h-full w-full object-cover"
+                                width={32}
+                                height={32}
+                                className="w-full h-full object-contain"
                             />
                           </div>
-                          <Flame className="h-8 w-8 text-primary animate-pulse" />
+                          <div className="flex-1 text-center">
+                            <Scissors className="h-6 w-6 text-primary mx-auto"/>
+                            <p className="text-xs text-muted-foreground mt-1">Stonecutter</p>
+                          </div>
+                        </div>
+                      </div>
+                  )}
+                  {recipeType === "smelting" && (
+                      <div
+                          className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
+                            <Image
+                                src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                width={32}
+                                height={32}
+                                className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <Flame className="h-12 w-12 text-primary animate-pulse"/>
+                          <p className="text-xs text-muted-foreground">Furnace</p>
+                        </div>
+                      </div>
+                  )}
+                  {recipeType === "blasting" && (
+                      <div
+                          className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                        <div className="flex flex-col items-center gap-2">
+                          <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
+                            <Image
+                                src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                width={32}
+                                height={32}
+                                className="w-full h-full object-contain"
+                            />
+                          </div>
+                          <Flame className="h-12 w-12 text-primary animate-pulse"/>
                           <p className="text-xs text-muted-foreground">Blast Furnace</p>
                         </div>
                       </div>
                   )}
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="flex items-center gap-4">
-                    <ChevronRight className="h-8 w-8 text-primary animate-pulse" />
-                    <div className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition">
-                      <Image
-                        src={`/assets/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "-")}.png`}
-                        alt={filteredRecipes[currentRecipeIndex].result.name}
-                        width={64}
-                        height={64}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="text-lg font-medium text-primary">
-                      {filteredRecipes[currentRecipeIndex].result.count > 1
-                        ? `x${filteredRecipes[currentRecipeIndex].result.count}`
-                        : ""}
+                  <div className="flex items-center">
+                    <ChevronRight className="h-12 w-12 text-primary animate-pulse"/>
+                    <div className="relative">
+                      <div
+                          className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition"
+                          style={{width: "150px", height: "150px"}}>
+                        <Image
+                            src={`/assets/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                            alt={filteredRecipes[currentRecipeIndex].result.name}
+                            width={32}
+                            height={32}
+                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-contain"
+                        />
+                      </div>
+                      <div
+                          className="absolute -right-8 top-1/2 transform -translate-y-1/2 text-lg font-medium text-primary">
+                        {filteredRecipes[currentRecipeIndex].result.count > 1
+                            ? `x${filteredRecipes[currentRecipeIndex].result.count}`
+                            : ""}
+                      </div>
                     </div>
                   </div>
                 </div>
