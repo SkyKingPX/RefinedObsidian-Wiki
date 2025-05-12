@@ -640,34 +640,28 @@ export default function DocumentationPage() {
           <section id="compatibility" className="space-y-6">
             <h2 className="text-2xl font-bold tracking-tight text-primary">Compatibility</h2>
             <Card className="bg-card border-border/50 hover-scale theme-transition">
-              <CardHeader>
-                <CardTitle className="text-primary">Compatible With</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  RefinedObsidian is compatible with the following platforms and mods
-                </CardDescription>
-              </CardHeader>
+              <div className="h-6"></div>
               <CardContent className="space-y-6">
                 <div>
                   <h3 className="text-lg font-medium text-primary mb-2">Supported Platforms</h3>
                   <ul className="grid gap-2 md:grid-cols-3">
-                    <li className="flex items-center gap-2 group hover-lift">
+                    <li className="flex items-center gap-2 group">
                       <ChevronRight className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1" />
                       <span>Fabric 1.20.1-1.21.4</span>
                     </li>
-                    <li className="flex items-center gap-2 group hover-lift">
+                    <li className="flex items-center gap-2 group">
                       <ChevronRight className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1" />
                       <span>Forge 1.20.1-1.21.4</span>
                     </li>
-                    <li className="flex items-center gap-2 group hover-lift">
+                    <li className="flex items-center gap-2 group">
                       <ChevronRight className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1" />
                       <span>NeoForge 1.20.4-1.21.4</span>
                     </li>
                   </ul>
                 </div>
-
                 <div>
                   <h3 className="text-lg font-medium text-primary mb-2">Compatible Mods</h3>
-                  <div className="flex items-center gap-2 group hover-lift">
+                  <div className="flex items-center gap-2 group">
                     <ChevronRight className="h-4 w-4 text-primary transition-transform duration-200 group-hover:translate-x-1" />
                     <span>Just Enough Items (JEI)</span>
                   </div>
@@ -676,11 +670,11 @@ export default function DocumentationPage() {
               <CardFooter>
                 <p className="text-sm text-muted-foreground">
                   Available on{" "}
-                  <a href="https://modrinth.com" className="text-primary hover:underline">
+                  <a href={LINKS.modrinth_project} className="text-primary hover:underline">
                     Modrinth
                   </a>{" "}
                   and{" "}
-                  <a href="https://curseforge.com" className="text-primary hover:underline">
+                  <a href={LINKS.curseforge_project} className="text-primary hover:underline">
                     CurseForge
                   </a>
                 </p>
@@ -723,7 +717,7 @@ export default function DocumentationPage() {
                 <div className="space-y-2">
                   <h4 className="font-medium text-primary">Installation</h4>
                   <p className="text-sm text-muted-foreground">
-                    Place the downloaded .jar file in your Minecraft mods folder.
+                    Place the downloaded .jar file in your Minecraft mods folder or automatically install it into an Instance with the CurseForge or Modrinth App.
                   </p>
                 </div>
                 <div className="space-y-2">
