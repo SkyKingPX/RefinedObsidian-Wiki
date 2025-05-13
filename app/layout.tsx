@@ -9,7 +9,6 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "RefinedObsidian Wiki",
   description: "Wiki for the RefinedObsidian Minecraft Mod by EmberForge Development",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
