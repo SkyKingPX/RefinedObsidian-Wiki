@@ -25,6 +25,7 @@ import {Separator} from "@/components/ui/separator"
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
 import {ThemeToggle} from "@/components/theme-toggle"
 import {CommunityCredits} from "@/components/community-credits"
+import {trimsPage1, trimsPage2, trimsPage3, trimsPage4} from "@/app/trims-pages";
 import {blocksPage1, blocksPage2, blocksPage3, blocksPage4, blocksPage5} from "@/app/blocks-pages";
 
 export default function DocumentationPage() {
@@ -57,12 +58,22 @@ export default function DocumentationPage() {
         setBlockIndex((prevIndex) => (prevIndex + 1) % 5);
     }
 
-    // Ensure component is mounted to avoid hydration mismatch
+    const trimsPages = [trimsPage1, trimsPage2, trimsPage3, trimsPage4];
+
+    const [trimsIndex, setTrimsIndex] = useState(0);
+
+    const prevTrimsPage = () => {
+        setTrimsIndex((prevIndex) => (prevIndex - 1 + 4) % 4);
+    }
+
+    const nextTrimsPage = () => {
+        setTrimsIndex((prevIndex) => (prevIndex + 1) % 4);
+    }
+
     useEffect(() => {
         setMounted(true)
     }, [])
 
-    // Reset recipe index when changing recipe type
     useEffect(() => {
         setRecipeIndex(0)
     }, [recipeType])
@@ -294,44 +305,18 @@ export default function DocumentationPage() {
                                 value="trims"
                                 className="mt-6 space-y-6 animate-in fade-in-50 data-[state=inactive]:animate-out data-[state=inactive]:fade-out-0"
                             >
+                                <div className="flex items-center justify-between mb-4">
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={prevTrimsPage}>
+                                        <ArrowLeft className="h-5 w-5 text-primary" />
+                                    </Button>
+                                    <span className="text-sm text-muted-foreground">Page {trimsIndex + 1} of {trimsPages.length}</span>
+                                    <Button className="hover:text-accent-foreground h-10 w-10 hover:bg-primary/10" variant="ghost" size="icon" onClick={nextTrimsPage}>
+                                        <ArrowRight className="h-5 w-5 text-primary" />
+                                    </Button>
+                                </div>
+                                <p className="text-sm text-muted-foreground">Obsidian Dust can be used to trim any Armor with any Trim Pattern.</p>
                                 <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                                    <div className="flex gap-4 group hover-lift">
-                                        <div
-                                            className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
-                                            <Image
-                                                src="/assets/items/refined-obsidian-pickaxe.png"
-                                                alt="RefinedObsidian Pickaxe"
-                                                width={64}
-                                                height={64}
-                                                className="w-full h-full object-contain"
-                                            />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-primary">RefinedObsidian
-                                                Pickaxe</h3>
-                                            <p className="text-sm text-muted-foreground">
-                                                Mines faster than netherite and has a chance to double ore drops.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-4 group hover-lift">
-                                        <div
-                                            className="h-16 w-16 shrink-0 overflow-hidden rounded-md border border-border/50 bg-card theme-transition group-hover:border-primary/50 p-2">
-                                            <Image
-                                                src="/assets/items/obsidian-sword.png"
-                                                alt="Obsidian Sword"
-                                                width={64}
-                                                height={64}
-                                                className="w-full h-full object-contain"
-                                            />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-primary">Obsidian Sword</h3>
-                                            <p className="text-sm text-muted-foreground">
-                                                Deals additional fire damage and has a chance to apply Wither effect.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    {trimsPages[trimsIndex]()}
                                 </div>
                             </TabsContent>
                         </Tabs>
@@ -347,32 +332,36 @@ export default function DocumentationPage() {
                                         value="crafting"
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
-                                        <Image src="assets/crafting.png" alt="Crafting Table" width={24} height={24}
-                                               className="mr-2"/>
+                                        <div className="w-6 h-6 mr-2">
+                                            <img src="/assets/crafting.png" alt="Crafting Table" className="w-full h-full object-contain" />
+                                        </div>
                                         Crafting Table
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="stonecutting"
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
-                                        <Image src="assets/stonecutting.png" alt="Stonecutter" width={24} height={24}
-                                               className="mr-2"/>
+                                        <div className="w-6 h-6 mr-2">
+                                            <img src="/assets/stonecutting.png" alt="Stonecutter" className="w-full h-full object-contain" />
+                                        </div>
                                         Stone Cutter
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="smelting"
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
-                                        <Image src="assets/smelting.png" alt="Furnace" width={24} height={24}
-                                               className="mr-2"/>
+                                        <div className="w-6 h-6 mr-2">
+                                            <img src="/assets/smelting.png" alt="Furnace" className="w-full h-full object-contain" />
+                                        </div>
                                         Smelting
                                     </TabsTrigger>
                                     <TabsTrigger
                                         value="blasting"
                                         className="transition-all data-[state=active]:bg-primary/10 data-[state=active]:text-primary"
                                     >
-                                        <Image src="assets/blasting.png" alt="Blast Furnace" width={24} height={24}
-                                               className="mr-2"/>
+                                        <div className="w-6 h-6 mr-2">
+                                            <img src="/assets/blasting.png" alt="Blast Furnace" className="w-full h-full object-contain" />
+                                        </div>
                                         Blasting
                                     </TabsTrigger>
                                 </TabsList>
@@ -392,11 +381,10 @@ export default function DocumentationPage() {
                                     <span className="sr-only">Next recipe</span>
                                 </Button>
                             </div>
-                            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
-                                <div>
+                            <div className="grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2">
+                                <div className="flex justify-center">
                                     {recipeType === "crafting" && (
-                                        <div
-                                            className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-background p-2 theme-transition max-w-[250px] mx-auto">
+                                        <div className="grid grid-cols-3 gap-1 rounded-lg border border-border/50 bg-background p-2 theme-transition max-w-[250px]">
                                             {Array.from({length: 9}).map((_, index) => {
                                                 const ingredient = filteredRecipes[currentRecipeIndex].ingredients.find(
                                                     (i) => i.position === index,
@@ -405,16 +393,15 @@ export default function DocumentationPage() {
                                                     <div
                                                         key={index}
                                                         className="aspect-square rounded border border-border/50 bg-card/80 p-1 transition-all duration-300 hover:border-primary/50 hover:bg-card theme-transition"
-                                                        style={{maxWidth: "100px", maxHeight: "100px"}}
                                                     >
                                                         {ingredient && (
-                                                            <Image
-                                                                src={`/assets/items/${ingredient.name.toLowerCase().replace(/\s+/g, "_")}.png`}
-                                                                alt={ingredient.name}
-                                                                width={32}
-                                                                height={32}
-                                                                className="w-full h-full object-contain"
-                                                            />
+                                                            <div className="w-full h-full flex items-center justify-center">
+                                                                <img
+                                                                    src={`/assets/items/${ingredient.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                                    alt={ingredient.name}
+                                                                    className="max-w-full max-h-full object-contain"
+                                                                />
+                                                            </div>
                                                         )}
                                                     </div>
                                                 )
@@ -422,18 +409,16 @@ export default function DocumentationPage() {
                                         </div>
                                     )}
                                     {recipeType === "stonecutting" && (
-                                        <div
-                                            className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex items-center gap-4">
-                                                <div
-                                                    className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
-                                                    <Image
-                                                        src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
-                                                        alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                                                        width={32}
-                                                        height={32}
-                                                        className="w-full h-full object-contain"
-                                                    />
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
+                                                    <div className="w-full h-full flex items-center justify-center">
+                                                        <img
+                                                            src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                                            className="max-w-full max-h-full object-contain"
+                                                        />
+                                                    </div>
                                                 </div>
                                                 <div className="flex-1 text-center">
                                                     <Scissors className="h-6 w-6 text-primary mx-auto"/>
@@ -443,18 +428,16 @@ export default function DocumentationPage() {
                                         </div>
                                     )}
                                     {recipeType === "smelting" && (
-                                        <div
-                                            className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex flex-col items-center gap-2">
-                                                <div
-                                                    className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
-                                                    <Image
-                                                        src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
-                                                        alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                                                        width={32}
-                                                        height={32}
-                                                        className="w-full h-full object-contain"
-                                                    />
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
+                                                    <div className="w-full h-full flex items-center justify-center">
+                                                        <img
+                                                            src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                                            className="max-w-full max-h-full object-contain"
+                                                        />
+                                                    </div>
                                                 </div>
                                                 <Flame className="h-12 w-12 text-primary animate-pulse"/>
                                                 <p className="text-xs text-muted-foreground">Furnace</p>
@@ -462,18 +445,16 @@ export default function DocumentationPage() {
                                         </div>
                                     )}
                                     {recipeType === "blasting" && (
-                                        <div
-                                            className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px] mx-auto">
+                                        <div className="rounded-lg border border-border/50 bg-background p-4 theme-transition max-w-[250px]">
                                             <div className="flex flex-col items-center gap-2">
-                                                <div
-                                                    className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
-                                                    <Image
-                                                        src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
-                                                        alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
-                                                        width={32}
-                                                        height={32}
-                                                        className="w-full h-full object-contain"
-                                                    />
+                                                <div className="aspect-square w-12 rounded border border-border/50 bg-card/80 p-1">
+                                                    <div className="w-full h-full flex items-center justify-center">
+                                                        <img
+                                                            src={`/assets/items/${filteredRecipes[currentRecipeIndex].ingredients[0].name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                            alt={filteredRecipes[currentRecipeIndex].ingredients[0].name}
+                                                            className="max-w-full max-h-full object-contain"
+                                                        />
+                                                    </div>
                                                 </div>
                                                 <Flame className="h-12 w-12 text-primary animate-pulse"/>
                                                 <p className="text-xs text-muted-foreground">Blast Furnace</p>
@@ -482,22 +463,19 @@ export default function DocumentationPage() {
                                     )}
                                 </div>
                                 <div className="flex items-center justify-center">
-                                    <div className="flex items-center">
-                                        <ChevronRight className="h-12 w-12 text-primary animate-pulse"/>
+                                    <div className="flex flex-col md:flex-row items-center">
+                                        <ChevronRight className="h-8 w-8 md:h-12 md:w-12 text-primary animate-pulse mb-2 md:mb-0" />
                                         <div className="relative">
-                                            <div
-                                                className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition"
-                                                style={{width: "120px", height: "120px"}}>
-                                                <Image
-                                                    src={`/assets/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
-                                                    alt={filteredRecipes[currentRecipeIndex].result.name}
-                                                    width={96}
-                                                    height={96}
-                                                    className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-contain"
-                                                />
+                                            <div className="rounded border border-border/50 bg-card/80 p-2 transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-md hover:shadow-primary/20 theme-transition aspect-square w-[100px] md:w-[120px]">
+                                                <div className="w-full h-full flex items-center justify-center">
+                                                    <img
+                                                        src={`/assets/items/${filteredRecipes[currentRecipeIndex].result.name.toLowerCase().replace(/\s+/g, "_")}.png`}
+                                                        alt={filteredRecipes[currentRecipeIndex].result.name}
+                                                        className="max-w-full max-h-full object-contain"
+                                                    />
+                                                </div>
                                             </div>
-                                            <div
-                                                className="absolute -right-8 top-1/2 transform -translate-y-1/2 text-lg font-medium text-primary">
+                                            <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 text-lg font-medium text-primary">
                                                 {filteredRecipes[currentRecipeIndex].result.count > 1
                                                     ? `x${filteredRecipes[currentRecipeIndex].result.count}`
                                                     : ""}
