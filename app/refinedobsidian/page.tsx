@@ -613,7 +613,7 @@ export default function DocumentationPage() {
                                     </p>
                                 </div>
                                 <div className="flex gap-4">
-                                    <Link href="/downloads">
+                                    <Link href="/downloads/refinedobsidian">
                                         <Button
                                             variant="outline"
                                             className="border-primary text-primary hover:bg-primary/10 transition-all duration-300 hover:scale-105"
