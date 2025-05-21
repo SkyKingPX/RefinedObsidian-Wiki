@@ -19,64 +19,64 @@ import {Footer} from "@/components/footer";
 const versions = {
     Fabric: [
         {
-            version: "1.0.0-1.21.1",
+            version: "1.0.0-1.21.1-fabric",
             mcVersion: "1.21.1",
-            date: "2025-04-15",
+            date: "2025-05-17",
             isLatest: true,
-            downloadUrl: "https://cdn.modrinth.com/data/FSsFIek4/versions/nqfE7zF9/Record-1.21-1.1.1.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/kAmnJSKP/refinedobsidian-1.0.0-1.21.1-fabric.jar"
         },
         {
-            version: "1.0.0-1.20.4",
+            version: "1.0.0-1.20.4-fabric",
             mcVersion: "1.20.4",
-            date: "2025-03-10",
+            date: "2025-05-17",
             isLatest: false,
-            downloadUrl: "https://example.com/fabric-1.0.0-1.20.4.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/6Wlb4qJc/refinedobsidian-1.0.0-1.20.4-fabric.jar"
         },
         {
-            version: "1.0.0-1.20.1",
+            version: "1.0.0-1.20.1-fabric",
             mcVersion: "1.20.1",
-            date: "2025-02-05",
+            date: "2025-05-17",
             isLatest: false,
-            downloadUrl: "https://example.com/fabric-1.0.0-1.20.1.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/DS3kya4D/refinedobsidian-1.0.0-1.20.1-fabric.jar"
         },
     ],
     Forge: [
         {
-            version: "1.0.0-1.21.1",
+            version: "1.0.0-1.21.1-forge",
             mcVersion: "1.21.1",
-            date: "2025-04-10",
+            date: "2025-05-17",
             isLatest: true,
-            downloadUrl: "https://example.com/forge-1.0.0-1.21.1.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/ircB8uku/refinedobsidian-1.0.0-1.21.1-forge.jar"
         },
         {
-            version: "1.0.0-1.20.4",
+            version: "1.0.0-1.20.4-forge",
             mcVersion: "1.20.4",
-            date: "2025-03-05",
+            date: "2025-05-17",
             isLatest: false,
-            downloadUrl: "https://example.com/forge-1.0.0-1.20.4.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/njn8LhxS/refinedobsidian-1.0.0-1.20.4-forge.jar"
         },
         {
-            version: "1.0.0-1.20.1",
+            version: "1.0.0-1.20.1-forge",
             mcVersion: "1.20.1",
-            date: "2025-02-01",
+            date: "2025-05-17",
             isLatest: false,
-            downloadUrl: "https://example.com/forge-1.0.0-1.20.1.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/YnmzZbfC/refinedobsidian-1.0.0-1.20.1-forge.jar"
         },
     ],
     NeoForge: [
         {
-            version: "1.0.0-1.21.1",
+            version: "1.0.0-1.21.1-neoforge",
             mcVersion: "1.21.1",
-            date: "2025-04-05",
+            date: "2025-05-17",
             isLatest: true,
-            downloadUrl: "https://example.com/neoforge-1.0.0-1.21.1.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/PzT8qQ9P/refinedobsidian-1.0.0-1.21.1-neoforge.jar"
         },
         {
-            version: "1.0.0-1.20.4",
+            version: "1.0.0-1.20.4-neoforge",
             mcVersion: "1.20.4",
-            date: "2025-03-01",
+            date: "2025-05-17",
             isLatest: false,
-            downloadUrl: "https://example.com/neoforge-1.0.0-1.20.4.jar"
+            downloadUrl: "https://cdn.modrinth.com/data/XiboXdEl/versions/4Iu12PxK/refinedobsidian-1.0.0-1.20.4-neoforge.jar"
         },
     ],
 }
@@ -120,12 +120,12 @@ export default function DownloadsPage() {
                         <span className="text-xl font-bold text-primary">RefinedObsidian</span>
                     </div>
                     <div className="hidden md:flex items-center gap-6">
-                        <Link href="/" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/refinedobsidian" className="text-sm font-medium hover-lift relative group">
                             Wiki
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform"></span>
                         </Link>
-                        <Link href="/downloads" className="text-sm font-medium hover-lift relative group">
+                        <Link href="/downloads/refinedobsidian" className="text-sm font-medium hover-lift relative group">
                             Downloads
                             <span
                                 className="absolute inset-x-0 -bottom-1 h-0.5 bg-primary scale-x-100 transition-transform"></span>
